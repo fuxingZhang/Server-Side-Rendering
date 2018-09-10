@@ -2,6 +2,8 @@
   <div>
     <router-link to="/">index</router-link>
     <p>{{data}}</p>
+    <p>{{test}}</p>
+    <p>{{$store.state.test}}</p>
   </div>
 </template>
 
@@ -9,7 +11,8 @@
 export default {
   data() {
     return {
-      data: this.$store.state.data
+      data: this.$store.state.data,
+      test: this.$store.state.test
     }
   },
   asyncData ({store}) {
